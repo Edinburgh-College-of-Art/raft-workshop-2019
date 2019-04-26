@@ -25,11 +25,6 @@
 <li><a href="#sec-2-14">2.14. copying install</a></li>
 </ul>
 </li>
-<li><a href="#sec-3">3. Jobs to do</a>
-<ul>
-<li><a href="#sec-3-1">3.1. the struggle between our desire to intervene (led by taste) and the obligation to leave things to sit still and do what they have to do</a></li>
-</ul>
-</li>
 </ul>
 </div>
 </div>
