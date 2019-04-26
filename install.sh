@@ -31,6 +31,8 @@ make
 sudo make install
 
 systemctl status bluetooth
+
+pip install bluepy
 # ------------------------------------------------------------
 # Python OSC
 pip3 install python-osc
