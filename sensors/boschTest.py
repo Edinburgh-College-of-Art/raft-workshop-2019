@@ -1,3 +1,5 @@
+# starting point here was the Adafruit script below from Tony DiCola, merged this with the scripts I've used to send sensor data over to PD
+
 # Simple Adafruit BNO055 sensor reading example.  Will print the orientation
 # and calibration data every second.
 #
