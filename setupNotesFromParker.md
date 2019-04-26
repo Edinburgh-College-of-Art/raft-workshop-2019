@@ -142,12 +142,6 @@ git clone <https://github.com/adafruit/Adafruit_Python_LSM303.git>
 cd Adafruit<sub>Python</sub><sub>LSM303</sub>
 sudo python setup.py install
 
-make sure that 
-
-install SoX
-
-copy audio files across
-
 ## make the Pi run your code on load<a id="sec-2-13" name="sec-2-13"></a>
 
 To do this, you'll need to edit your ~/.profile file
@@ -206,32 +200,4 @@ And, to copy the image back onto the SD:
 
 gzip -dc /path/to/backup.gz | sudo dd of=/dev/rdisk1 bs=1m
 
-For more information, see this wiki page.
 
-# Jobs to do<a id="sec-3" name="sec-3"></a>
-
--   find and gather up all sound files
--   cut wood pieces for Wheels
--   gather up all equipment, tools, drill bits and pack up
--   setup router properly to serve IP addresses on wireless to all RASBERRY PiS
--   build all hardware and nail it down, check it works
--   copy working SD card to other SD cards
--   hunt for better speakers
--   edit and prepare media
--   find old bird media (especially Chris Watson Stuff)
--   record new media if time allows.
--   calibrate each compass
--   make notes
--   write programme note for Anna to typset and get printed
--   make software
--   build presets
--   build master controllers
--   Write to PaTRICIO and
--   add files to .profile for auto launch
--   run PI First, then connect amplifier, PI in middle port, amp in port next to charging sockets
--   copy SD cards for each PI
--   gather all sound resources
--   buy one more SD card
--   leave batteries charging
-
-## the struggle between our desire to intervene (led by taste) and the obligation to leave things to sit still and do what they have to do<a id="sec-3-1" name="sec-3-1"></a>
