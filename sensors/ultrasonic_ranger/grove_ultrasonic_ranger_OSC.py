@@ -145,7 +145,7 @@ def main():
     print('Detecting distance...')
     while True:
         range = (sonar.get_distance())
-        print('{} cm'.format(sonar.get_distance()))
+        print('{} cm'.format(sonar.get_distance())) # you can comment out this line when you're happy that you're getting your data in PD
         send_readings_to_pd(range)
         time.sleep(0.075)
 #-------------------------------------------------------------------------------
