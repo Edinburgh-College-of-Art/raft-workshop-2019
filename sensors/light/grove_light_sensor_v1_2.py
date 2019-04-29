@@ -16,7 +16,7 @@ Examples:
         import time
         from grove.grove_light_sensor import GroveLightSensor
 
-        # connect to alalog pin 2(slot A2)
+        # connect to analog pin 2(slot A2)
         PIN = 2
 
         sensor = GroveLightSensor(pin)

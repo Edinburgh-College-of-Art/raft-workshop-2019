@@ -24,17 +24,23 @@ sudo apt-get install -y \
          libglib2.0-dev \
             libudev-dev \
             libical-dev \
-        libreadline-dev
+        libreadline-dev \
+            python-dbus \
+         python-gobject
 
 ./configure
 make
 sudo make install
 
+# cat "PRETTY_HOSTNAME=RaspberryPi" >> /etc/machine-info # Set Peripheral Name
+
+sudo systemctl start bluetooth
 systemctl status bluetooth
+sudo systemctl stop bluetooth
 
 # OR
 
-pip install bluepy
+sudo pip3 install bluepy
 # ------------------------------------------------------------
 # Python OSC
 pip3 install python-osc

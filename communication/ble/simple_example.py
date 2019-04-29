@@ -1,8 +1,10 @@
 from bluepy import btle
 
-print ("Connecting...")
-dev = btle.Peripheral("B0:B4:48:BF:C9:83")
+# Scan and print devices
+devs = list(btle.Scanner().scan())
 
-print ("Services...")
-for svc in dev.services:
- print str(svc)
+for dev in devs:
+    print(dev.addr)
+    print(dev.rssi)
+    print(dev.connectable)
+    print("\n")

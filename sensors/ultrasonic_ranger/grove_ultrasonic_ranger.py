@@ -2,18 +2,18 @@
 #
 # This is the code for Grove - Ultrasonic Ranger
 # (https://www.seeedstudio.com/Grove-Ultrasonic-Ranger-p-960.html)
-# which is a non-contact distance measurement module which works with 40KHz sound wave. 
+# which is a non-contact distance measurement module which works with 40KHz sound wave.
 #
 # This is the library for Grove Base Hat which used to connect grove sensors for raspberry pi.
 #
-
+#-------------------------------------------------------------------------------
 '''
 ## License
 
 The MIT License (MIT)
 
 Grove Base Hat for the Raspberry Pi, used to connect grove sensors.
-Copyright (C) 2018  Seeed Technology Co.,Ltd. 
+Copyright (C) 2018  Seeed Technology Co.,Ltd.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -92,20 +92,16 @@ class GroveUltrasonicRanger(object):
 
 
 Grove = GroveUltrasonicRanger
-
-
+#-------------------------------------------------------------------------------
 def main():
-    from grove.helper import SlotHelper
-    sh = SlotHelper(SlotHelper.GPIO)
-    pin = sh.argv2pin()
-
+    print("Plug sensor into pin 5\n")
+    pin = 5
     sonar = GroveUltrasonicRanger(pin)
 
     print('Detecting distance...')
     while True:
         print('{} cm'.format(sonar.get_distance()))
         time.sleep(1)
-
+#-------------------------------------------------------------------------------
 if __name__ == '__main__':
     main()
-
