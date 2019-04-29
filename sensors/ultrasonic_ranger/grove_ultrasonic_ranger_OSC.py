@@ -36,7 +36,7 @@
 #-------------------------------------------------------------------------------
 import sys
 import time
-
+import argparse
 from grove.gpio import GPIO
 from pythonosc import udp_client
 from pythonosc import osc_message_builder
@@ -73,7 +73,7 @@ def send_readings_to_pd(range):
         """
     msg = osc_message_builder.OscMessageBuilder(address=OSC_ADDR)
         
-        msg.add_arg(range, arg_type="f")
+    msg.add_arg(range, arg_type="f")
     
     client.send_message(OSC_ADDR, msg.build())
 #-------------------------------------------------------------------------------------
@@ -121,9 +121,9 @@ class GroveUltrasonicRanger(object):
         if dt > 530:
             return None
 
-distance = ((t2 - t1) * 1000000 / 29 / 2)    # cm
+        distance = ((t2 - t1) * 1000000 / 29 / 2)    # cm
     
-    return distance
+        return distance
     
     def get_distance(self):
         while True:
