@@ -8,7 +8,8 @@
 #-------------------------------------------------------------------------------
 from time import sleep
 import smbus
-from Adafruit_I2C import Adafruit_I2C
+# from Adafruit_I2C import Adafruit_I2C
+from sensors.digital_light import Adafruit_I2C
 import RPi.GPIO as GPIO
 from smbus import SMBus
 #-------------------------------------------------------------------------------
