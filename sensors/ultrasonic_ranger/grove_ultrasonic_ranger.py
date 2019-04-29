@@ -33,10 +33,11 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 '''
+#-------------------------------------------------------------------------------
 import sys
 import time
 from grove.gpio import GPIO
-
+#-------------------------------------------------------------------------------
 usleep = lambda x: time.sleep(x / 1000000.0)
 
 _TIMEOUT1 = 1000

@@ -43,6 +43,13 @@ sudo systemctl stop bluetooth
 
 sudo pip3 install bluepy
 # ------------------------------------------------------------
+# I2C
+sudo apt-get install -y \
+           python-smbus \
+              i2c-tools
+
+# ------------------------------------------------------------
+
 # Python OSC
 pip3 install python-osc
 git clone https://github.com/toddtreece/osc-examples.git
