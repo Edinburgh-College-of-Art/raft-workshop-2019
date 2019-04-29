@@ -8,6 +8,7 @@ sudo apt-get install \
             puredata \
         librxtx-java \ # for processing
        openjdk-6-jdk \ # for processing
+       netatalk \ # for viewing files on OS X filesystem
 # ------------------------------------------------------------
 # Install Processing
 curl https://processing.org/download/install-arm.sh | sudo sh
@@ -59,3 +60,6 @@ sudo pip3 install .
 cd ..
 python3 examples/blink.py
 # ------------------------------------------------------------
+# stop and restart netatalk
+sudo /etc/init.d/netatalk stop
+sudo /etc/init.d/netatalk start
