@@ -53,3 +53,6 @@ sudo pip3 install .
 cd ..
 python3 examples/blink.py
 # ------------------------------------------------------------
+# install Pure Data
+sudo apt-get install puredata
+# ------------------------------------------------------------
