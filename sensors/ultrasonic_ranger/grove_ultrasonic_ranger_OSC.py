@@ -5,7 +5,11 @@
 # which is a non-contact distance measurement module which works with 40KHz sound wave.
 #
 # This is the library for Grove Base Hat which used to connect grove sensors for raspberry pi.
-#
+
+# However, in the absence of a Grove Base Hat, raft workshop has hacked this code to force the sensor to connect to the GPIO pin # 5
+# we have added some functionality enabling the sensor to pass its data to other applications across the network using OSC.
+# Give the script an argument --ip to specify the IP address you want to send the data to, --port allows you to specify the port
+# 
 #-------------------------------------------------------------------------------
 '''
     ## License
