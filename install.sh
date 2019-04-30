@@ -92,7 +92,7 @@ sudo /etc/init.d/netatalk start
 # set the main preferences for the operating system such as vnc, ssh i2c etc. 
 sudo raspi-config nonint do_ssh 0 # turn on SSH
 sudo raspi-config nonint do_vnc 0 # turn on VNC
-sudo raspi-config nonint do_12c 0 # turn on i2c interface
+sudo raspi-config nonint do_i2c 0 # turn on i2c interface
 sudo raspi-config nonint do_spi 0
 sudo raspi-config nonint do_serial 0 
 sudo raspi-config nonint do_rgpio 0
