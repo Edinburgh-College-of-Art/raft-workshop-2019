@@ -1,6 +1,6 @@
 # ------------------------------------------------------------
-sudo apt-get update
-sudo apt-get upgrade # for the workshop we should comment this out, it takes ages otherwise
+# sudo apt-get update
+# sudo apt-get upgrade # for the workshop we should comment this out, it takes ages otherwise
 sudo apt-get install \
               nodejs \
                  npm \
@@ -8,7 +8,7 @@ sudo apt-get install \
             puredata \
         librxtx-java \ # for processing
        openjdk-6-jdk \ # for processing
-       netatalk \ # for viewing files on OS X filesystem
+            netatalk  # for viewing files on OS X filesystem
 # ------------------------------------------------------------
 # Install Processing
 curl https://processing.org/download/install-arm.sh | sudo sh
