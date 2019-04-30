@@ -11,7 +11,7 @@ sudo apt-get install \
             netatalk  # for viewing files on OS X filesystem
 # ------------------------------------------------------------
 # Install Processing
-curl https://processing.org/download/install-arm.sh | sudo sh
+# curl https://processing.org/download/install-arm.sh | sudo sh
 cd ~
 # ------------------------------------------------------------
 # # Bluetooth
