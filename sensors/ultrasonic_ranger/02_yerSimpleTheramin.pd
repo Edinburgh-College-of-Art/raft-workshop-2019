@@ -1,0 +1,54 @@
+#N canvas 13 44 1036 658 10;
+#N canvas 50 74 666 191 sensorRecieve 0;
+#X obj 39 38 oscparse;
+#X obj 39 62 list trim;
+#X obj 39 16 netreceive -u -b 8000;
+#X obj 39 123 outlet;
+#X obj 39 86 route ranger;
+#X text 200 14 this abstraction listens to the network and collects
+data on port 8000 \, if messages start with the term "ranger" they
+are routed into your patch;
+#X connect 0 0 1 0;
+#X connect 1 0 4 0;
+#X connect 2 0 0 0;
+#X connect 4 0 3 0;
+#X restore 40 7 pd sensorRecieve;
+#X obj 39 147 / 512;
+#X floatatom 74 65 5 0 0 0 - - -, f 5;
+#X obj 38 338 line~;
+#X obj 38 371 osc~;
+#X obj 38 397 *~ 0.2;
+#X obj 29 473 dac~;
+#X text 121 64 change this number here to make fake sensor data;
+#X floatatom 38 230 5 0 0 0 - - -, f 5;
+#X text 87 125 assuming you have up to 512 different values (your sensor
+may give you different numbers \, but divide by the maximum value you
+get to normalize the sensor data to values between 0 and 1 When values
+are between 0 and 1 \, it's easy to scale them up to any value you
+like.;
+#X obj 77 40 hsl 128 15 0 512 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X obj 39 110 - 0;
+#X text 94 317 smooth the numbers into signals to control a sine wave
+osciallator;
+#X text 97 370 a sine wave;
+#X text 110 398 scale the amplitude;
+#X text 91 251 for example \, * by 2000 Hz;
+#X msg 38 313 \$1 200;
+#X obj 38 253 * 1000;
+#X obj 38 280 + 100;
+#X text 86 282 add 100 Hz because your laptop speakers don't go much
+lower;
+#X connect 0 0 11 0;
+#X connect 1 0 8 0;
+#X connect 2 0 11 0;
+#X connect 3 0 4 0;
+#X connect 4 0 5 0;
+#X connect 5 0 6 0;
+#X connect 5 0 6 1;
+#X connect 8 0 17 0;
+#X connect 10 0 2 0;
+#X connect 11 0 1 0;
+#X connect 16 0 3 0;
+#X connect 17 0 18 0;
+#X connect 18 0 16 0;

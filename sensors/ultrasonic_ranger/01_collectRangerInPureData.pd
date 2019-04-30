@@ -1,0 +1,72 @@
+#N canvas 171 23 1036 658 10;
+#N canvas 552 80 1262 402 sensorRecieve 0;
+#X obj 39 38 oscparse;
+#X obj 39 62 list trim;
+#X obj 39 16 netreceive -u -b 8000;
+#X obj 39 123 outlet;
+#X obj 39 86 route ranger;
+#X connect 0 0 1 0;
+#X connect 1 0 4 0;
+#X connect 2 0 0 0;
+#X connect 4 0 3 0;
+#X restore 40 7 pd sensorRecieve;
+#X obj 39 147 / 512;
+#X floatatom 74 65 5 0 0 0 - - -, f 5;
+#X obj 38 484 line~;
+#X obj 38 517 osc~;
+#X obj 38 543 *~ 0.2;
+#X obj 29 619 dac~;
+#X text 121 64 change this number here to make fake sensor data;
+#X floatatom 38 230 5 0 0 0 - - -, f 5;
+#X text 87 125 assuming you have up to 512 different values (your sensor
+may give you different numbers \, but divide by the maximum value you
+get to normalize the sensor data to values between 0 and 1 When values
+are between 0 and 1 \, it's easy to scale them up to any value you
+like.;
+#X obj 77 40 hsl 128 15 0 512 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 1900 1;
+#X obj 39 110 - 0;
+#X text 90 250 for example \, * by 12;
+#X obj 38 253 * 12;
+#X obj 38 354 + 60;
+#X text 86 357 add 60;
+#X obj 38 397 mtof;
+#X msg 38 459 \$1 2;
+#X obj 38 278 i;
+#X obj 38 302 change;
+#X obj 38 324 t f b, f 78;
+#X text 86 386 and pretend these are the midi notes from a keyboard
+\, turning them into frequencies \, we can hear a scale \, starting
+at middle C on the piano using the prebuilt equation mtof (miditofrequency)
+;
+#X obj 38 571 *~, f 78;
+#X obj 580 465 vline~;
+#X msg 580 437 1 10 \, 0 1234 123;
+#X text 602 318 create an envelope over the sound;
+#X text 602 340 an envelop shapes the amplitude of the tone over time
+;
+#X text 601 361 in the case below \, the amplitude ramps up to 1(maximum)
+in 10ms \, it then ramps to 0 in 1234ms after a 123ms delay.;
+#X text 600 397 this means you get a short note with a long tail and
+a fairly sharp attack;
+#X connect 0 0 11 0;
+#X connect 1 0 8 0;
+#X connect 2 0 11 0;
+#X connect 3 0 4 0;
+#X connect 4 0 5 0;
+#X connect 5 0 22 0;
+#X connect 8 0 13 0;
+#X connect 10 0 2 0;
+#X connect 11 0 1 0;
+#X connect 13 0 18 0;
+#X connect 14 0 16 0;
+#X connect 16 0 17 0;
+#X connect 17 0 3 0;
+#X connect 18 0 19 0;
+#X connect 19 0 20 0;
+#X connect 20 0 14 0;
+#X connect 20 1 24 0;
+#X connect 22 0 6 1;
+#X connect 22 0 6 0;
+#X connect 23 0 22 1;
+#X connect 24 0 23 0;
