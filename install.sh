@@ -1,5 +1,5 @@
 # ------------------------------------------------------------
-sudo apt-get update 
+sudo apt-get update
 sudo apt-get upgrade # for the workshop we should comment this out, it takes ages otherwise
 sudo apt-get install \
               nodejs \
@@ -27,7 +27,12 @@ sudo apt-get install -y \
             libical-dev \
         libreadline-dev \
             python-dbus \
-         python-gobject
+         python-gobject \
+              bluetooth \
+                  bluez \
+                blueman \
+           pi-bluetooth \
+           python-bluez
 
 ./configure
 make
@@ -49,7 +54,6 @@ sudo apt-get install -y \
               i2c-tools
 
 # ------------------------------------------------------------
-
 # Python OSC
 pip3 install python-osc
 git clone https://github.com/toddtreece/osc-examples.git
@@ -65,7 +69,7 @@ git clone https://github.com/Seeed-Studio/grove.py
 cd grove.py
 sudo pip3 install .
 cd ..
-python3 examples/blink.py
+# python3 examples/blink.py
 # ------------------------------------------------------------
 # stop and restart netatalk
 sudo /etc/init.d/netatalk stop
