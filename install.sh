@@ -1,6 +1,10 @@
 # ------------------------------------------------------------
 # sudo apt-get update
 # sudo apt-get upgrade # for the workshop we should comment this out, it takes ages otherwise
+sudo apt-get install -y \
+        python-rpi.gpio \
+       python3-rpi.gpio
+# ------------------------------------------------------------       
 sudo apt-get install \
               nodejs \
                  npm \
