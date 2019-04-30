@@ -12,41 +12,41 @@ sudo apt-get install \
 # ------------------------------------------------------------
 # Install Processing
 curl https://processing.org/download/install-arm.sh | sudo sh
-
-# ------------------------------------------------------------
-# Bluetooth
 cd ~
-wget http://www.kernel.org/pub/linux/bluetooth/bluez-5.37.tar.xz
-tar -xf bluez-5.37.tar.xz
-cd bluez-5.37
-sudo apt-get install -y \
-             libusb-dev \
-          libdbus-1-dev \
-         libglib2.0-dev \
-            libudev-dev \
-            libical-dev \
-        libreadline-dev \
-            python-dbus \
-         python-gobject \
-              bluetooth \
-                  bluez \
-                blueman \
-           pi-bluetooth \
-           python-bluez
-
-./configure
-make
-sudo make install
-
-# cat "PRETTY_HOSTNAME=RaspberryPi" >> /etc/machine-info # Set Peripheral Name
-
-sudo systemctl start bluetooth
-systemctl status bluetooth
-sudo systemctl stop bluetooth
-
-# OR
-
-sudo pip3 install bluepy
+# ------------------------------------------------------------
+# # Bluetooth
+# cd ~
+# wget http://www.kernel.org/pub/linux/bluetooth/bluez-5.37.tar.xz
+# tar -xf bluez-5.37.tar.xz
+# cd bluez-5.37
+# sudo apt-get install -y \
+#              libusb-dev \
+#           libdbus-1-dev \
+#          libglib2.0-dev \
+#             libudev-dev \
+#             libical-dev \
+#         libreadline-dev \
+#             python-dbus \
+#          python-gobject \
+#               bluetooth \
+#                   bluez \
+#                 blueman \
+#            pi-bluetooth \
+#            python-bluez
+#
+# ./configure
+# make
+# sudo make install
+#
+# # cat "PRETTY_HOSTNAME=RaspberryPi" >> /etc/machine-info # Set Peripheral Name
+#
+# sudo systemctl start bluetooth
+# systemctl status bluetooth
+# sudo systemctl stop bluetooth
+#
+# # OR
+#
+# sudo pip3 install bluepy
 # ------------------------------------------------------------
 # I2C
 sudo apt-get install -y \
@@ -55,11 +55,15 @@ sudo apt-get install -y \
 
 # ------------------------------------------------------------
 # Python OSC
+curl -sL https://deb.nodesource.com/setup_10.x > nodesetup.sh
+sudo bash nodesetup.sh
+sudo apt-get install -y nodejs
+
 pip3 install python-osc
 git clone https://github.com/toddtreece/osc-examples.git
 cd osc-examples
 npm install
-cd ..
+cd ~
 # ------------------------------------------------------------
 # lsm303
 sudo pip3 install adafruit-lsm303
