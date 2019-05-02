@@ -13,6 +13,15 @@ sudo apt-get install \
         librxtx-java \ # for processing
        openjdk-6-jdk \ # for processing
             netatalk  # for viewing files on OS X filesystem
+# ------------------------------------------------------------
+# Optionally add installation of some useful multimedia packages
+# uncomment the following by deleting the hash before running the script.
+
+# sudo apt-get install sox # smash up some sound files
+# sudo apt-get install ffmpeg # do anything you like to video
+# sudo apt-get install mpv # a really nice video player
+# Install Processing
+# curl https://processing.org/download/install-arm.sh | sudo sh
 cd ~
 # ------------------------------------------------------------
 # I2C
@@ -45,3 +54,12 @@ cd ..
 # stop and restart netatalk
 sudo /etc/init.d/netatalk stop
 sudo /etc/init.d/netatalk start
+# ------------------------------------------------------------
+# set the main preferences for the operating system such as vnc, ssh i2c etc.
+sudo raspi-config nonint do_ssh 0 # turn on SSH
+sudo raspi-config nonint do_vnc 0 # turn on VNC
+sudo raspi-config nonint do_i2c 0 # turn on i2c interface
+sudo raspi-config nonint do_spi 0
+sudo raspi-config nonint do_serial 0
+sudo raspi-config nonint do_rgpio 0
+sudo raspi-config nonint do_resolution 1920 1080 # set the monitor resolution so that when you VNC in, it's not a tiny shitty screen
