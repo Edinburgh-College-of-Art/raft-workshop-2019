@@ -13,6 +13,7 @@ sudo apt-get install \
         librxtx-java \ # for processing
        openjdk-6-jdk \ # for processing
             netatalk  # for viewing files on OS X filesystem
+
 # ------------------------------------------------------------
 # Optionally add installation of some useful multimedia packages
 # uncomment the following by deleting the hash before running the script.
@@ -22,6 +23,7 @@ sudo apt-get install \
 # sudo apt-get install mpv # a really nice video player
 # Install Processing
 # curl https://processing.org/download/install-arm.sh | sudo sh
+sudo apt-get install puredata
 cd ~
 # ------------------------------------------------------------
 # I2C
