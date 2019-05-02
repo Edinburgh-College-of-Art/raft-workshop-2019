@@ -6,6 +6,14 @@ Scripts, environments and code snippets for the RAFT Workshop 2019
 
 ### PureData
 
+#### On RaspberryPi
+
+in terminal:
+
+```bash
+pd -nogui -open /path/to/file.pd &
+```
+
 ### MaxMSP
 
 ### Processing
